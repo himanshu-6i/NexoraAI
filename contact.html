@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Nexora</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background-color: #0a0a0f;
+      color: #e4e4e7;
+      overflow-x: hidden;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 70px;
+      position: fixed;
+      top: 0;
+      background: rgba(10,10,15,0.8);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    nav .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #00b3ff;
+      text-shadow: 0 0 15px #00b3ff;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 35px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+    nav ul li a:hover {
+      color: #00b3ff;
+      text-shadow: 0 0 8px #00b3ff;
+    }
+
+    /* ---------- CONTACT SECTION ---------- */
+    .contact {
+      padding-top: 120px;
+      text-align: center;
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #111122 0%, #0a0a0f 80%);
+    }
+    .contact h1 {
+      font-size: 3rem;
+      color: #fff;
+      text-shadow: 0 0 25px #00b3ff;
+      margin-bottom: 20px;
+    }
+    .contact p {
+      color: #cfcfcf;
+      margin-bottom: 40px;
+    }
+    .form-container {
+      max-width: 550px;
+      margin: auto;
+      background: rgba(255,255,255,0.03);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,179,255,0.3);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border: none;
+      outline: none;
+      border-radius: 8px;
+      background: #1a1a23;
+      color: #fff;
+      font-size: 1rem;
+      resize: none;
+      transition: 0.3s;
+    }
+    input:focus, textarea:focus {
+      box-shadow: 0 0 8px #00b3ff;
+      background: #151520;
+    }
+    button {
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #fff;
+      background: linear-gradient(90deg, #00b3ff, #8b5cf6);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 15px #00b3ff;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #8b5cf6;
+    }
+
+    /* ---------- SOCIAL LINKS ---------- */
+    .socials {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+    .socials a {
+      color: #00b3ff;
+      font-size: 1.5rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .socials a:hover {
+      color: #8b5cf6;
+      text-shadow: 0 0 15px #8b5cf6;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      text-align: center;
+      padding: 25px;
+      font-size: 0.9rem;
+      color: #aaa;
+      background: #0d0d13;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 768px) {
+      nav { padding: 20px 30px; }
+      .contact h1 { font-size: 2.3rem; }
+      .form-container { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Nexora<span>AI</span></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html" style="color:#00b3ff; text-shadow:0 0 8px #00b3ff;">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <h1>Get in Touch</h1>
+    <p>We’d love to hear from you! Let’s build the future together with Nexora.</p>
+    <div class="form-container">
+      <form onsubmit="sendMessage(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div class="socials">
+      <a href="https://github.com/himanshu-6i/himanshu-6i">🌐</a>
+      <a href="https://www.linkedin.com/in/himanshu-meena-6i">💼</a>
+      <a href="mailto:hm5080408@gmail.com">📧</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Nexora. All Rights Reserved.
+  </footer>
+
+  <script>
+    function sendMessage(e) {
+      e.preventDefault();
+      alert("Thank you for contacting Nexora! We'll get back to you soon.");
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+    }
+  </script>
+
+</body>
+</html>
